@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tabpy
+    runtime: docker
+    plan: free
+    healthCheckPath: /info
+    envVars:
+      - key: TABPY_USER
+        value: tableau_user
+      - key: TABPY_PASSWORD
+        sync: false  # Буде запитано при деплої
