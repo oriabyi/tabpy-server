@@ -8,7 +8,8 @@ RUN pip install --no-cache-dir tabpy scipy numpy pandas
 
 RUN mkdir -p /app/config /app/state
 
-COPY tabpy.conf /app/config/tabpy.conf
+COPY config/tabpy.conf /app/config/tabpy.conf
+COPY config/passwords.txt /app/config/passwords.txt
 
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh

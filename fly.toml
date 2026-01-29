@@ -1,0 +1,17 @@
+app = "tabpy"
+primary_region = "fra"
+
+[deploy]
+strategy = "immediate"
+wait_timeout = "10m0s"
+
+[http_service]
+internal_port = 9_004
+min_machines_running = 1
+processes = [ "app" ]
+
+[[vm]]
+cpu_kind = "shared"
+cpus = 1
+memory = "512mb"
+
