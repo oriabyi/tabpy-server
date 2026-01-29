@@ -1,0 +1,10 @@
+services:
+  tabpy:
+    build: .
+    container_name: tabpy
+    ports:
+      - "9004:9004"
+    volumes:
+      - ./state:/app/state
+      - ./config:/app/config
+    restart: unless-stopped
